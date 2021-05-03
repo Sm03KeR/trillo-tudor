@@ -1,0 +1,104 @@
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--grey-light-2);
+    box-shadow: var(--shadow-dark);
+
+    min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        overflow-x: hidden;
+    }
+}
+
+.header {
+    height: 7rem;
+    background-color: #fff;
+    border-bottom:1px solid var(--grey-light-2);
+    font-size: 1.4rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        height: 12rem;
+        align-content: space-around;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+
+    @media only screen and (max-width: $bp-medium) {
+       flex-direction: column; 
+    }
+}
+
+.side-bar {
+    background-color: var(--grey-dark-1);
+    flex: 0 0 18%;  // 1)flex-grow  2)flex-shrink  3)flex-basis(width)
+
+    display: flex;
+    flex-direction: column;  //normal flex-direction:row => justify content aranjeaza itemele de la stanga la dearpta si align-itms de sus jos
+//daca schimbam flex-direction:column, atunci se schimba si sensul celor 2 proprietati in directie opusa
+    justify-content: space-between;
+}
+
+.hotel-view {
+    background-color: #fff;
+
+    flex: 1; //flex-grow = 1 => ocupa tot spatiul disponibil ramas
+}
+
+
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--grey-light-1);
+    border-bottom: 1px solid var(--grey-light-2);
+    font-size: 1.4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
+}
+
+.description {
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,.06);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews {
+    background-color: transparent;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
